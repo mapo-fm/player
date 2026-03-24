@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포FM 프로토타입</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>마포FM</h1>
+        </header>
+
+        <section class="player-section">
+            <div id="now-playing" class="now-playing">
+                <div class="program-image-container">
+                    <img id="program-image" src="https://via.placeholder.com/150" alt="프로그램 이미지">
+                </div>
+                <div class="program-info">
+                    <p class="status">ON AIR</p>
+                    <h2 id="program-title">로딩 중...</h2>
+                    <p id="program-time">-</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <audio id="audio-stream" src="http://onair.mapofm.net/mapofm"></audio>
+                <button id="play-pause-btn" class="play-btn">
+                    <span id="play-icon">▶</span>
+                    <span id="pause-icon" class="hidden">||</span>
+                    재생
+                </button>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <nav class="day-tabs">
+                <button class="day-tab" data-day="월요일">월</button>
+                <button class="day-tab" data-day="화요일">화</button>
+                <button class="day-tab" data-day="수요일">수</button>
+                <button class="day-tab" data-day="목요일">목</button>
+                <button class="day-tab" data-day="금요일">금</button>
+                <button class="day-tab" data-day="토요일">토</button>
+                <button class="day-tab" data-day="일요일">일</button>
+            </nav>
+
+            <div id="schedule-list" class="schedule-list">
+                <!-- 프로그램 목록이 여기에 렌더링됩니다 -->
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
